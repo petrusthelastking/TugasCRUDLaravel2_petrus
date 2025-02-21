@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow dengan Tombol</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" type="text/css" href="styleSlideShow.css">
+
+    <!-- Link ke file jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Script untuk slideshow -->
+    <script>
+        var i = 0;
+        $(document).ready(function() {
+            $('.slidertitle, #slider img').hide(); // Menyembunyikan semua gambar dan judul
+            showNextImage(); // Memulai slideshow
+            setInterval(showNextImage, 3000); // Setiap 3 detik menampilkan gambar berikutnya
+
+            // Tombol untuk gambar berikutnya
+            $('#next').click(function() {
+                showNextImage();
+            });
+
+            // Tombol untuk gambar sebelumnya
+            $('#prev').click(function() {
+                i = (i > 1) ? i - 2 : 2; // Mengatur index agar bisa kembali
+                showNextImage();
+            });
+        });
+
+        function showNextImage() {
+            i++;
+            $('#slider img').hide(); // Sembunyikan semua gambar
+            $('.slidertitle').hide(); // Sembunyikan semua judul
+            $('#sliderImage' + i).fadeIn(1100).delay(1100).fadeOut(1100); // Fade gambar masuk dan keluar
+            $('#title' + i).fadeIn(1100).delay(1100).fadeOut(1100); // Fade judul masuk dan keluar
+            if (i == 3) {
+                i = 0; // Ulangi jika sudah sampai gambar terakhir
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="slider">
+        <img id="sliderImage1" src="Untitled.jpg" alt="Gambar 1">
+        <img id="sliderImage2" src="Untitled221.jpg" alt="Gambar 2">
+        <img id="sliderImage3" src="Gambar3.jpg" alt="Gambar 3">
+        <div id="title1" class="slidertitle">Title 1</div>
+        <div id="title2" class="slidertitle">Title 2</div>
+        <div id="title3" class="slidertitle">Title 3</div>
+    </div>
+
+    <!-- Tombol kontrol slideshow -->
+    <div id="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+</body>
+</html>

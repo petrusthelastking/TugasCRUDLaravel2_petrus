@@ -1,0 +1,133 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+}
+
+/* Container styling */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading styling */
+h2 {
+  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Form labels and inputs */
+label, p {
+  display: block;
+  font-weight: 600;
+  color: #666666;
+  margin: 15px 0 8px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+/* Checkbox styling */
+.colors label {
+  display: inline-block;
+  margin: 8px 10px 0 0;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #333333;
+  cursor: pointer;
+}
+
+.colors input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #4A90E2;
+}
+
+/* Button styling */
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(45deg, #4A90E2, #357ABD);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #357ABD, #4A90E2);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Result display styling */
+#result {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

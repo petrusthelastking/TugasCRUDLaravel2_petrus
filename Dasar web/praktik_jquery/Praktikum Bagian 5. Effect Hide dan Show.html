@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Sembunyikan semua div dengan fadeOut dan slideUp secara bersamaan
+                $(".tombol3").click(function(){
+                    $("#div1").fadeOut().slideUp();
+                    $("#div2").fadeOut("slow").slideUp("slow");
+                    $("#div3").fadeOut(3000).slideUp(3000);
+                });
+                
+                // Tampilkan semua div dengan fadeIn dan slideDown secara bersamaan
+                $(".tombol4").click(function(){
+                    $("#div1").fadeIn().slideDown();
+                    $("#div2").fadeIn("slow").slideDown("slow");
+                    $("#div3").fadeIn(3000).slideDown(3000);
+                });
+                
+                // FadeTo dengan slide untuk perubahan opacity
+                $(".tombol5").click(function(){
+                    $("#div1").fadeTo("slow", 0.15).slideUp().slideDown();
+                    $("#div2").fadeTo("slow", 0.4).slideUp().slideDown();
+                    $("#div3").fadeTo("slow", 0.7).slideUp().slideDown();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>jQuery Effect with Slide</p>
+        <div id="div1" class="kontak" style="background-color: pink; width: 200px; height: 100px;"></div> <br>
+        <div id="div2" class="kontak" style="background-color: lightblue; width: 200px; height: 100px;"></div> <br>
+        <div id="div3" class="kontak" style="background-color: lightgreen; width: 200px; height: 100px;"></div> <br><br>
+
+        <button class="tombol3">Fade Out with Slide</button>
+        <button class="tombol4">Fade In with Slide</button>
+        <button class="tombol5">Fade To with Slide</button>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pilih Warna</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="text-section">
+            <h2>Form Pilih Warna</h2>
+            <p>Silakan anda menginputkan nama dan juga memilih warna yang ada suka. Anda bisa memilih warna lebih dari dua warna.</p>
+            <div class="color-preview">
+                <div class="color-box blue"></div>
+                <div class="color-box green"></div>
+                <div class="color-box red"></div>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="form-container">
+            <h1>Welcome Back!!</h1>
+            <p>Pastikan anda sudah mengisi form yang sudah saya berikan dibawah jangan ada yang terlewat dalam pengisian form tersebut</p>
+            <form id="colorForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Masukan Nama Anda">
+                
+                <label>Pilih Warna</label>
+                <div class="color-options">
+                    <label><input type="checkbox" name="color" value="Merah"> Merah</label>
+                    <label><input type="checkbox" name="color" value="Biru"> Biru</label>
+                    <label><input type="checkbox" name="color" value="Hijau"> Hijau</label>
+                    <label><input type="checkbox" name="color" value="Kuning"> Kuning</label>
+                    <label><input type="checkbox" name="color" value="Ungu"> Ungu</label>
+                </div>
+                
+                <button type="button" class="submit-btn" onclick="submitForm()">Pilih</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="JS2.js"></script>
+</body>
+</html>

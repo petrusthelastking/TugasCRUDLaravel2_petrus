@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleSlide.css"/>
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#kotak2").slideDown("slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="flip" style="cursor: pointer; background-color: lightgrey; padding: 10px;">Klik untuk Effect slide</div>
+        <!-- Perbaikan penulisan atribut style -->
+        <div id="kotak2" style="display:none; background-color: lightblue; padding: 20px;">Selamat Pagi</div>
+    </body>
+</html>
